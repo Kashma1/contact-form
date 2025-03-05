@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor | Contact form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+   body{
+   background-color: hsl(143, 40%, 90%); 
+   font-family: karla;
+   font-size: 10px;
+   overflow: hidd;
+}
+.container{
+  margin-inline: 400px 300px;
+  max-width: 600px;
+  padding: 20px 10px;
+   background-color: hsl(0, 0%, 100%);
+   display: flex;
+   justify-content: center;
+   height: 100vh;
+   align-items: center;
+   
+}
+h2{
+ color: #333;   
+ margin-bottom: 24px;
+}
+.form-group{
+  margin-bottom: 20px; 
+  display: inline;
+  gap: 20px; 
+}
+label{
+    display: flex;
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 14px;
+    border: 10px;
+}
+textarea,
+ input[type="text"],
+ input[type="email"]{
+    width: 250px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #666;
+  
+ }
+ .name-group{
+   display: flex; 
+   gap: 20px;
+ }
+ .name-group .form-group{
+    flex:10px ;
+ }
+ .radio-group{
+   display: flex;
+   gap: 20px; 
+ }
+ .radio-option{
+   display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+ }
+ .radio-option input[type="radio"]{
+margin-right: 8px;
+ }
+ textarea{
+  min-height: 100px;
+  resize: vertical;  
+ }
+ .checkbox-group{
+display: flex;
+align-items: center;
+margin: 20px 0;
+gap: 10px;
+ }
+ .submit-btn{
+    width: 100%;
+    padding: 12px;
+   background-color: #007b6c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+ }
+ .submit-btn:hover{
+    background-color: #04554b;
+ }
+@media(max-width:450px) {
+
+  main{
+  max-width:450px;
+  overflow-y: scroll;
+}
+}
+ 
+
+</style>
+</head>
+<body>
+ <div class="container"><form>
+  <h2>Contact Us</h2>
+
+  <div class="name-group">
+    <div class="form-group">
+      <label>First Name*</label>
+  <input type="text" Required>
+  </div>
+<div class="form-group">
+  <label>Last Name*</label>
+  <input type="text" Required>
+</div>
+</div>
+<div class="form-group">
+   <label class="requeird">Email Address*</label> 
+  <input type="email" Required>
+  </div>
+ <div class="form-group"> 
+  <label class="required">Query Type*</label>
+  <div class="radio-group">
+    <label class="radio-option"> 
+      <input type="radio" name="queryType" Required>General Enquiry
+    </label>
+    <label class="radio-option"> 
+      <input type="radio" Required> Support Request
+    </label>
+  </div> 
+</div>
+  <div class="form-group"> 
+   <label class="required" >Message*</label>
+   <textarea required></textarea>
+</div>
+
+<div class="checkbox-group"><input type="checkbox" id="consent" required>
+  <label for="consent" class="requierd" >I concent to being contacted by the team*</label>
+</div>
+  <button type="submit" class="submit-btn">Submit</button>
+  </form>
+
+  <div class="attribution">
+  </div> 
+</div>
+</div>
+</body>
+</html>
